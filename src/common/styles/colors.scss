@@ -1,0 +1,59 @@
+// brand colors
+$c-purple:       #3D2462;
+$c-purple-lt:    #6E46AE;
+$c-purple-xl:    #D5D3E4;
+$c-purple-dk:    #230939;
+
+$c-teal:         #007D91;
+$c-teal-lt:      #00B6B4;
+$c-teal-dk:      darken($c-teal, 15%);
+
+$c-fuschia:      #922A86;
+$c-fuschia-lt:   #B557AF;
+$c-fuschia-dk:   darken($c-fuschia, 15%);
+
+$c-primary:      $c-purple;
+$c-primary-lt:   $c-purple-lt;
+$c-primary-xl:   $c-purple-xl;
+$c-primary-dk:   $c-purple-dk;
+
+$c-secondary:    $c-teal;
+$c-secondary-lt: $c-teal-lt;
+$c-secondary-dk: $c-teal-dk;
+
+$c-tertiary:    $c-fuschia;
+$c-tertiary-lt: $c-fuschia-lt;
+$c-tertiary-dk: $c-fuschia-dk;
+
+
+// accent colors
+$c-red:          #DC323C;
+$c-red-lt:       lighten($c-red, 15%);
+$c-red-dk:       darken($c-red, 15%);
+$c-orange:       #F09B1E;
+$c-orange-lt:    lighten($c-orange, 15%);
+$c-orange-dk:    darken($c-orange, 15%);
+$c-green:        #82D296;
+$c-green-lt:     lighten($c-green, 15%);
+$c-green-dk:     darken($c-green, 15%);
+
+
+// utility colors
+$c-error:        #FF2400;
+$c-error-lt:     lighten($c-error, 15%);
+$c-error-dk:     darken($c-error, 15%);
+
+
+// grayscale - rework with UX team
+$c-white:  #FFF;
+$c-gray-1: #FAFAFA;
+$c-gray-2: #F0F0F0;
+$c-gray-3: #E6E7E8;
+$c-gray-4: #C4C4C4;
+$c-gray-5: #979899;
+$c-gray-6: #737373;
+$c-gray-7: #3E3F42;
+$c-gray-8: #202124;
+$c-gray-9: #060607;
+$c-black:  #000;
+

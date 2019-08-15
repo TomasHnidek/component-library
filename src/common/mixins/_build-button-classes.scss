@@ -1,0 +1,45 @@
+@mixin build-button-classes($color, $hover-color, $active-color, $text-color: $c-white) {
+  background-color: $color;
+  border-color: $color;
+  color: $text-color;
+  
+  &:hover, &:focus {
+    background-color: $hover-color;
+    border-color: $hover-color
+  }
+  
+  &:active {
+    background-color: $active-color;
+    border-color: $active-color;
+  }
+  
+  &.btn--type-secondary, &.btn--type-tertiary {
+    color: $color;
+    
+    &:hover, &:focus, &:active {
+      color: $text-color;
+    }
+  }
+  
+  &.btn--type-tertiary {
+    &:after {
+      border-left-color: $color;
+    }
+    
+    &:hover, &:focus {
+      color: $hover-color;
+      
+      &:after {
+        border-left-color: $hover-color;
+      }
+    }
+    
+    &:active {
+      color: $active-color;
+      
+      &:after {
+        border-left-color: $active-color;
+      }
+    }
+  }
+}

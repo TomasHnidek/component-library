@@ -1,0 +1,32 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-extra-semi": 2,
+    "import/no-extraneous-dependencies": 0,
+    "linebreak-style": 0,
+    "function-paren-newline": 0,
+    "import/prefer-default-export": 0,
+    "no-console": [0],
+    "quotes": [2, "single"],
+    "strict": [2, "never"],
+    "no-underscore-dangle": "off",
+    "no-undef": 1,
+    "no-unused-vars": 1,
+    "react/jsx-closing-bracket-location": [1, "after-props"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/require-default-props": [2],
+    "react/forbid-prop-types": [0]
+  }
+}

@@ -1,0 +1,26 @@
+// these are currently the defaults
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// make additional breakpoint maps to limit filesize of xl utility class names
+$grid-breakpoints--no-xl: map-remove($grid-breakpoints, "xl");
+
+$grid-breakpoints--xl-only: (
+	xl: map-get($grid-breakpoints, "xl")
+);
+
+// this is currently the default, placeholder here to change spacers later
+$spacer: 1rem;
+
+// border radius units - currently set to bootstrap defaults
+$border-radius:     .25rem;
+$border-radius-sm:  .2rem;
+$border-radius-lg:  .3rem;
+
+// remove Bootstrap 4's default gutter spacing
+$grid-gutter-width: 0;
