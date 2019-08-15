@@ -1,6 +1,6 @@
 # TomasHnidek/component-library
 
-Based on [create-react-library](https://github.com/transitive-bullshit/create-react-library) 
+Based on [react-modern-library-boilerplate](https://github.com/transitive-bullshit/react-modern-library-boilerplate) 
 
 ## Intro
 
