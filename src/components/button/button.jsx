@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './_button.scss';
+import styles from './_button.scss';
 
 const Button = props => {
   const {
@@ -17,26 +17,26 @@ const Button = props => {
   
   const ButtonElement = href;
   
-  const typeClassName = type ? 'btn--type-' + type : '';
-  const colorClassName = color ? 'btn--color-' + color : '';
-  const sizeClassName = size ? 'btn--size-' + size : '';
-  const disabledClassName = disabled ? 'btn--disabled' : '';
-  const loadingClassName = disabled ? 'btn--loading' : '';
+  const typeClassName = type ? styles['btn--type-' + type] : '';
+  const colorClassName = color ? styles['btn--color-' + color] : '';
+  const sizeClassName = size ? styles['btn--size-' + size] : '';
+  const disabledClassName = disabled ? styles['btn--disabled'] : '';
+  const loadingClassName = disabled ? styles['btn--loading'] : '';
   
-  const classNames = classnames('btn', className, typeClassName, colorClassName, sizeClassName, disabledClassName, loadingClassName);
+  const classNames = classnames(styles['btn'], styles[className], typeClassName, colorClassName, sizeClassName, disabledClassName, loadingClassName);
   console.log(classNames);
 
   return (
     <ButtonElement className={classNames} disabled={disabled || loading}>
       {loading &&
-          <div className={'btn-spinner'}>
-            <div className={'bounce1'}></div>
-            <div className={'bounce2'}></div>
-            <div className={'bounce3'}></div>
+          <div className={styles.btnSpinner}>
+            <div className={styles.bounce1}></div>
+            <div className={styles.bounce2}></div>
+            <div className={styles.bounce3}></div>
           </div>
       }
       
-      <span className={'btn-content'}>{props.children}</span>
+      <span className={styles.btnContent}>{props.children}</span>
     </ButtonElement>
   )
 };

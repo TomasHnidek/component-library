@@ -9,12 +9,17 @@ module.exports = async ({ config, mode }) => {
   // Make whatever fine-grained changes you need
   config.module.rules.push({
     test: /\.(scss|sass)$/,
-    resolve: {
-      extensions: ['.scss', '.sass'],
-      mainFiles: []
-    },
-    use: ['style-loader', 'css-loader', 'sass-loader'],
-    include: path.resolve(__dirname, '../src'),
+    loaders: [
+      require.resolve('style-loader'),
+      {
+        loader: require.resolve('css-loader'),
+        options: {
+          importLoaders: 2,
+          modules: true
+        }
+      },
+      require.resolve('sass-loader'),
+    ]
   });
 
   // Return the altered config

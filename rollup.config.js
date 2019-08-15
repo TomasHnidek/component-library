@@ -1,10 +1,8 @@
-import autoprefixer from 'autoprefixer';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
-import postcss from 'postcss';
+import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
-import sass from 'rollup-plugin-sass';
 import url from 'rollup-plugin-url';
 
 import pkg from './package.json';
@@ -25,13 +23,10 @@ export default {
   ],
   plugins: [
     external(),
-    sass({
-      processor: css => postcss({
-        plugins: [autoprefixer],
-        modules: true
-      })
-        .process(css)
-        .then(result => result.css)
+    postcss({
+      extract: false,
+      modules: true,
+      use: ['sass'],
     }),
     url(),
     babel({
