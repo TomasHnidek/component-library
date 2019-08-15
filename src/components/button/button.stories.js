@@ -12,7 +12,7 @@ storiesOf('Button', module)
     () => {
       const label = text('label', 'My Button', 'Main');
       const type = select('type', ['primary', 'secondary', 'tertiary'], 'primary', 'Main');
-      const color = select('color', ['fuschia', 'teal', 'white'], 'fuschia', 'Main');
+      const color = select('color', ['fuchsia', 'teal', 'white'], 'fuchsia', 'Main');
       const size = select('size', ['xs', 'sm', 'md', 'lg', 'xl'], 'md', 'Main');
       const disabled = boolean('disabled', false, 'States');
       const loading = boolean('loading', false, 'States');

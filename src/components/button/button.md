@@ -30,19 +30,19 @@ Pass `color` prop:
 <div className="row bg-gray-8 p-4">
   <div className="col-4">
     <Button color="teal" className="mb-2">Teal Button</Button><br/>
-    <Button color="fuschia" className="mb-2">Fuschia Button</Button><br/>
+    <Button color="fuchsia" className="mb-2">fuchsia Button</Button><br/>
     <Button color="white">White Button</Button><br/>
   </div>
   
   <div className="col-4">
     <Button color="teal" type="secondary" className="mb-2">Teal Secondary</Button><br/>
-    <Button color="fuschia" type="secondary" className="mb-2">Fuschia Secondary</Button><br/>
+    <Button color="fuchsia" type="secondary" className="mb-2">fuchsia Secondary</Button><br/>
     <Button color="white" type="secondary">White Secondary</Button>
   </div>
   
   <div className="col-4">
     <Button color="teal" type="tertiary" className="mb-2">Teal Tertiary</Button><br/>
-    <Button color="fuschia" type="tertiary" className="mb-2">Fuschia Tertiary</Button><br/>
+    <Button color="fuchsia" type="tertiary" className="mb-2">fuchsia Tertiary</Button><br/>
     <Button color="white" type="tertiary">White Tertiary</Button><br/>
   </div>
 </div>
@@ -124,7 +124,7 @@ Pass `className` prop, which will be inherited by the top level element:
 
 - `className`: String (optional): class name to add to main button element
 - `type`: String (optional): type of button, options include `primary`, `secondary`, `tertiary`, defaults to `primary`
-- `color`: String (optional): color modifier, options include `teal`, `fuschia`, `white`, defaults to `fuschia`
+- `color`: String (optional): color modifier, options include `teal`, `fuchsia`, `white`, defaults to `fuchsia`
 - `size`: String (optional): size modifier, options include `xs`, `sm`, `lg`, `xl`
 - `onClick`: Function (optional): click handler
 - `href`: String (optional): external link URL

@@ -1,0 +1,46 @@
+@import '../../common/mixins/_build-button-classes';
+@import '../../common/styles/colors';
+@import '../../common/styles/variables';
+
+.btn {
+  font-size: .8rem;
+  border-radius: 5rem;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  padding: ($spacer * 2/3) ($spacer * 1.25);
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+  
+  &--type-tertiary {
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border: .45em solid transparent;
+      border-right: 0;
+      margin-left: .66em;
+      vertical-align: -10%;
+    }
+  }
+  
+  &--color-fuchsia {
+    @include build-button-classes($c-fuchsia, $c-fuchsia-lt, $c-fuchsia-dk);
+  }
+  
+  &--color-teal {
+    @include build-button-classes($c-teal, $c-teal-lt, $c-teal-dk);
+  }
+  
+  &--color-white {
+    @include build-button-classes($c-white, $c-gray-2, $c-gray-3, $c-gray-7);
+  }
+}
