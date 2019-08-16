@@ -8,16 +8,11 @@ import url from 'rollup-plugin-url';
 import pkg from './package.json';
 
 export default {
-  input: 'src/index.jsx',
+  input: ['src/index.jsx', 'src/components/alert/alert.jsx', 'src/components/button/button.jsx'],
   output: [
     {
-      file: pkg.main,
+      dir: pkg.main,
       format: 'cjs',
-      sourcemap: true
-    },
-    {
-      file: pkg.module,
-      format: 'es',
       sourcemap: true
     }
   ],

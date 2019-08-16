@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import styles from './_alert.module.scss';
 
@@ -13,7 +12,7 @@ const Alert = props => {
 
   const colorClassName = color ? styles['alert--color-' + color] : '';
 
-  const classNames = classnames(styles['alert'], colorClassName);
+  const classNames = [styles['alert'], colorClassName].join(' ');
   console.log(classNames);
 
   return (

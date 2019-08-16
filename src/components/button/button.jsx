@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import styles from './_button.module.scss';
 
@@ -23,7 +22,7 @@ const Button = props => {
   const disabledClassName = disabled ? styles['btn--disabled'] : '';
   const loadingClassName = disabled ? styles['btn--loading'] : '';
   
-  const classNames = classnames(styles['btn'], styles[className], typeClassName, colorClassName, sizeClassName, disabledClassName, loadingClassName);
+  const classNames = [styles['btn'], styles[className], typeClassName, colorClassName, sizeClassName, disabledClassName, loadingClassName].join(' ');
   console.log(classNames);
 
   return (
