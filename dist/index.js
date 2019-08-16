@@ -1,18 +1,2 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
-
-var Alert = React.lazy(function () {
-  return new Promise(function (resolve) { resolve({ 'default': require('./alert.js') }); });
-});
-var Button = React.lazy(function () {
-  return new Promise(function (resolve) { resolve({ 'default': require('./button.js') }); });
-});
-
-exports.Alert = Alert;
-exports.Button = Button;
+"use strict";function _interopDefault(e){return e&&"object"==typeof e&&"default"in e?e.default:e}Object.defineProperty(exports,"__esModule",{value:!0});var React=_interopDefault(require("react")),Alert=React.lazy(function(){return new Promise(function(e){e({default:require("./alert.js")})})}),Button=React.lazy(function(){return new Promise(function(e){e({default:require("./button.js")})})});exports.Alert=Alert,exports.Button=Button;
 //# sourceMappingURL=index.js.map
