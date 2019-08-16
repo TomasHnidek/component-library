@@ -2,14 +2,17 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-require('react');
-require('prop-types');
-require('./style-inject.es-17e02351.js');
-var alert = require('./alert.js');
-var button = require('./button.js');
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
+var React = _interopDefault(require('react'));
 
+var Alert = React.lazy(function () {
+  return new Promise(function (resolve) { resolve({ 'default': require('./alert.js') }); });
+});
+var Button = React.lazy(function () {
+  return new Promise(function (resolve) { resolve({ 'default': require('./button.js') }); });
+});
 
-exports.Alert = alert;
-exports.Button = button;
+exports.Alert = Alert;
+exports.Button = Button;
 //# sourceMappingURL=index.js.map

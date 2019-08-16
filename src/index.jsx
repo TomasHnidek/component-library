@@ -1,5 +1,7 @@
-import Alert from './components/alert/alert';
-import Button from './components/button/button';
+import React from 'react';
+
+const Alert = React.lazy(() => import('./components/alert/alert'));
+const Button = React.lazy(() => import('./components/button/button'));
 
 export {
   Alert,
