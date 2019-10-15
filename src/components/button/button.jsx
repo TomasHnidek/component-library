@@ -20,22 +20,20 @@ const Button = props => {
   const colorClassName = color ? styles['btn--color-' + color] : '';
   const sizeClassName = size ? styles['btn--size-' + size] : '';
   const disabledClassName = disabled ? styles['btn--disabled'] : '';
-  const loadingClassName = disabled ? styles['btn--loading'] : '';
+  const loadingClassName = loading ? styles['btn--loading'] : '';
   
   const classNames = [styles['btn'], styles[className], typeClassName, colorClassName, sizeClassName, disabledClassName, loadingClassName].join(' ');
-  console.log(classNames);
-
   return (
-    <ButtonElement className={classNames} disabled={disabled || loading}>
+    <ButtonElement className={classNames} disabled={disabled || !!loading}>
       {loading &&
-          <div className={styles.btnSpinner}>
-            <div className={styles.bounce1}></div>
-            <div className={styles.bounce2}></div>
-            <div className={styles.bounce3}></div>
+          <div className={styles['btn-spinner']}>
+            <div className={styles['bounce1']}></div>
+            <div className={styles['bounce2']}></div>
+            <div className={styles['bounce3']}></div>
           </div>
       }
       
-      <span className={styles.btnContent}>{props.children}</span>
+      <span className={styles['btn-content']}>{props.children}</span>
     </ButtonElement>
   )
 };

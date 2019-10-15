@@ -21,8 +21,8 @@ storiesOf('Button', module)
         <div>
           <Button
             onClick={action('button-click')}
-            disabled={disabled}
-            loading={loading}
+            disabled={!!disabled}
+            loading={!!loading}
             type={type}
             color={color}
             size={size}>

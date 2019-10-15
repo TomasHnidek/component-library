@@ -1,2 +1,2 @@
 "use strict";function styleInject(e,t){void 0===t&&(t={});var n=t.insertAt;if(e&&"undefined"!=typeof document){var s=document.head||document.getElementsByTagName("head")[0],d=document.createElement("style");d.type="text/css","top"===n&&s.firstChild?s.insertBefore(d,s.firstChild):s.appendChild(d),d.styleSheet?d.styleSheet.cssText=e:d.appendChild(document.createTextNode(e))}}exports.styleInject=styleInject;
-//# sourceMappingURL=style-inject.es-17e02351.js.map
+//# sourceMappingURL=style-inject.es-dcee06b6.js.map

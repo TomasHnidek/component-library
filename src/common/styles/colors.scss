@@ -1,59 +1,33 @@
-// brand colors
-$c-purple:       #3D2462;
-$c-purple-lt:    #6E46AE;
-$c-purple-xl:    #D5D3E4;
-$c-purple-dk:    #230939;
-
-$c-teal:         #007D91;
-$c-teal-lt:      #00B6B4;
-$c-teal-dk:      darken($c-teal, 15%);
-
-$c-fuchsia:      #922A86;
-$c-fuchsia-lt:   #B557AF;
-$c-fuchsia-dk:   darken($c-fuchsia, 15%);
-
-$c-primary:      $c-purple;
-$c-primary-lt:   $c-purple-lt;
-$c-primary-xl:   $c-purple-xl;
-$c-primary-dk:   $c-purple-dk;
-
-$c-secondary:    $c-teal;
-$c-secondary-lt: $c-teal-lt;
-$c-secondary-dk: $c-teal-dk;
-
-$c-tertiary:    $c-fuchsia;
-$c-tertiary-lt: $c-fuchsia-lt;
-$c-tertiary-dk: $c-fuchsia-dk;
-
-
-// accent colors
-$c-red:          #DC323C;
-$c-red-lt:       lighten($c-red, 15%);
-$c-red-dk:       darken($c-red, 15%);
-$c-orange:       #F09B1E;
-$c-orange-lt:    lighten($c-orange, 15%);
-$c-orange-dk:    darken($c-orange, 15%);
-$c-green:        #82D296;
-$c-green-lt:     lighten($c-green, 15%);
-$c-green-dk:     darken($c-green, 15%);
-
+// brand colors from https://paletton.com
+$c-primary:      #6613B1;
+$c-primary-lt:   #864DB9;
+$c-primary-ls:   #D6C6E4;
+$c-primary-dk:   #460780;
+$c-primary-ds:   #29024D;
 
 // utility colors
-$c-error:        #FF2400;
-$c-error-lt:     lighten($c-error, 15%);
-$c-error-dk:     darken($c-error, 15%);
+$c-error:        #FF3100;
+$c-error-lt:     #FF8466;
+$c-error-dk:     #DD2A00;
 
+$c-success:        #00D641;
+$c-success-lt:     #57D87E;
+$c-success-dk:     #00A331;
+
+$c-info:        #02B1C1;
+$c-info-lt:     #50BAC4;
+$c-info-dk:     #017B86;
+
+$c-warning:        #FF9900;
+$c-warning-lt:     #FFC266;
+$c-warning-dk:     #DD8400;
 
 // grayscale - rework with UX team
 $c-white:  #FFF;
-$c-gray-1: #FAFAFA;
-$c-gray-2: #F0F0F0;
-$c-gray-3: #E6E7E8;
-$c-gray-4: #C4C4C4;
-$c-gray-5: #979899;
-$c-gray-6: #737373;
-$c-gray-7: #3E3F42;
-$c-gray-8: #202124;
-$c-gray-9: #060607;
+$c-gray-1: #E6E6E6;
+$c-gray-2: #C2C2C2;
+$c-gray-3: #999999;
+$c-gray-4: #717171;
+$c-gray-5: #404040;
 $c-black:  #000;
 

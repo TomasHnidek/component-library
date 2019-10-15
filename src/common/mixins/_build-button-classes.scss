@@ -13,15 +13,18 @@
     border-color: $active-color;
   }
   
-  &.btn--type-secondary, &.btn--type-tertiary {
+  &.btn--type-secondary {
+    background-color: transparent;
     color: $color;
     
     &:hover, &:focus, &:active {
       color: $text-color;
+      background-color: $color;
     }
   }
   
   &.btn--type-tertiary {
+    color: $color;
     &:after {
       border-left-color: $color;
     }

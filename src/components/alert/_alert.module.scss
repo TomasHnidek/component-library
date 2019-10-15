@@ -6,17 +6,5 @@
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-
-  &--color-fuchsia {
-    color: $c-fuchsia-dk;
-    background-color: $c-fuchsia-lt;
-    border-color: $c-fuchsia;
-  }
-  
-  &--color-teal {
-    color: $c-teal-dk;
-    background-color: $c-teal-lt;
-    border-color: $c-teal;
-  }
 }
 
