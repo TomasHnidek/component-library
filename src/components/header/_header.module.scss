@@ -1,0 +1,30 @@
+@import "../../common/styles/colors";
+@import "../../common/styles/variables";
+
+.header {
+  left: 0;
+  min-width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: $c-primary-ls;
+  z-index: 1;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .global-actions {
+    display: flex;
+    padding-left: 20px;
+  }
+
+  .personal-actions {
+    display: flex;
+  }
+}

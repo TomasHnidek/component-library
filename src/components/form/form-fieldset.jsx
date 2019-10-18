@@ -18,12 +18,7 @@ class Fieldset extends React.Component {
   }
 }
 
-Fieldset.defaultProps = {
-  className: ''
-}
-
 Fieldset.propTypes = {
-  className: PropTypes.string,
   children: PropTypes.any.isRequired,
   setValue: PropTypes.func.isRequired
 };

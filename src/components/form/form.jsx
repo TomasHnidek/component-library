@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import lodash from 'lodash';
 
-import Button from '../button/button.jsx';
+import styles from '_form.module.scss';
 
 class Form extends React.Component {
   constructor(props) {
@@ -24,29 +24,13 @@ class Form extends React.Component {
     this.props.onSubmit(this.state.data);
   }
 
-  handleCancel(event) {
-    event.preventDefault();
-    this.props.onCancel();
-  }
-
   render() {
-    const { onSubmit, onCancel, children } = this.props;
-    const classNames = ['contact'].join(' ');
+    const { children } = this.props;
     return (
-      <form className={classNames}>
+      <form className={styles['form']} onSubmit={this.handleSubmit}>
         {React.Children.map(children, child =>
           React.cloneElement(child, { setValue: this.updateData })
         )}
-        <div className="button-wrap">
-          {onCancel ?
-            <Button onClick={this.handleCancel.bind(this)} type="secondary">
-              Cancel
-                </Button> : null}
-          {onSubmit ?
-            <Button onClick={this.handleSubmit.bind(this)}>
-              Submit
-                </Button> : null}
-        </div>
       </form>
     );
   }
@@ -55,14 +39,12 @@ class Form extends React.Component {
 Form.defaultProps = {
   className: '',
   onSubmit: () => { },
-  onCancel: null,
   data: {}
 }
 
 Form.propTypes = {
   className: PropTypes.string,
   onSubmit: PropTypes.func,
-  onCancel: PropTypes.func,
   data: PropTypes.object,
   children: PropTypes.any.isRequired
 };

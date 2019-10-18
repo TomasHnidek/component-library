@@ -2,59 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './_button.module.scss';
+import omit from 'object.omit';
 
 const Button = props => {
   const {
-    className,
-    type,
-    color,
-    size,
-    href,
-    disabled,
-    loading
+    design
   } = props;
+  let designClassName = design ? styles[`button-${design}`] : null;
   
-  const ButtonElement = href;
-  
-  const typeClassName = type ? styles['btn--type-' + type] : '';
-  const colorClassName = color ? styles['btn--color-' + color] : '';
-  const sizeClassName = size ? styles['btn--size-' + size] : '';
-  const disabledClassName = disabled ? styles['btn--disabled'] : '';
-  const loadingClassName = loading ? styles['btn--loading'] : '';
-  
-  const classNames = [styles['btn'], styles[className], typeClassName, colorClassName, sizeClassName, disabledClassName, loadingClassName].join(' ');
+  const classNames = [styles['button'], designClassName].join(' ');
+  const safeProps = omit(props, ['design', 'children'])
   return (
-    <ButtonElement className={classNames} disabled={disabled || !!loading}>
-      {loading &&
-          <div className={styles['btn-spinner']}>
-            <div className={styles['bounce1']}></div>
-            <div className={styles['bounce2']}></div>
-            <div className={styles['bounce3']}></div>
-          </div>
-      }
-      
-      <span className={styles['btn-content']}>{props.children}</span>
-    </ButtonElement>
+    <button className={classNames} {...safeProps}>
+      {props.children}
+    </button>
   )
 };
 
 Button.defaultProps = {
-  href: 'button',
-  className: '',
-  size: 'sm',
-  disabled: false,
-  loading: false
+  design: ''
 };
 
 Button.propTypes = {
-  type: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  design: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
-  href: PropTypes.string,
-  className: PropTypes.string,
-  size: PropTypes.string,
-  disabled: PropTypes.bool,
-  loading: PropTypes.bool
 };
 
 export default Button;
